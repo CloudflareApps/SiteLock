@@ -6,7 +6,9 @@
   var options = INSTALL_OPTIONS
 
   function updateElement () {
-    if (options.position === 'off' || !options.domain) return
+    var domain = !options.domain && INSTALL_ID === 'preview' ? 'example.com' : options.domain
+
+    if (options.position === 'off' || !domain) return
 
     var positionParts = options.position.split('_')
 
@@ -18,7 +20,7 @@
     var sitelockImage = document.createElement('img')
     sitelockImage.id = 'sl_shield_image'
     sitelockImage.border = '0'
-    sitelockImage.src = '//shield.sitelock.com/shield/' + options.domain
+    sitelockImage.src = 'https://shield.sitelock.com/shield/' + domain
     sitelockDiv.appendChild(sitelockImage)
     document.body.appendChild(sitelockDiv)
 

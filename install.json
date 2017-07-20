@@ -12,7 +12,8 @@
       "domain": {
         "order": 0,
         "type": "string",
-        "title": "Domain"
+        "title": "Domain",
+        "placeholder": "example.com"
       },
       "position": {
         "order": 1,
