@@ -1,0 +1,36 @@
+{
+  "resources": {
+    "body": [
+      {
+        "type": "script",
+        "src": "./source/app.js"
+      }
+    ]
+  },
+  "options": {
+    "properties": {
+      "domain": {
+        "order": 0,
+        "type": "string",
+        "title": "Domain"
+      },
+      "position": {
+        "order": 1,
+        "type": "string",
+        "title": "Position",
+        "format": "radios",
+        "enum": [
+          "bottom_right",
+          "bottom_left",
+          "off"
+        ],
+        "enumNames": {
+          "bottom_right": "Bottom right",
+          "bottom_left": "Bottom left",
+          "off": "Do not automatically insert badge"
+        },
+        "default": "bottom_right"
+      }
+    }
+  }
+}
